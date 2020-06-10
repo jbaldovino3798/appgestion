@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "397758587035",
+    "firebase_url": "https://gestion-deportiva.firebaseio.com",
+    "project_id": "gestion-deportiva",
+    "storage_bucket": "gestion-deportiva.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:397758587035:android:40907e60a29ba0d75ca63e",
+        "android_client_info": {
+          "package_name": "com.example.gestiondeportiva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "397758587035-peapveutm0kcglfs31hfocg8l41l3qul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmkS0kNEBby7JB9Rba75JIycFP-lPDdRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "397758587035-peapveutm0kcglfs31hfocg8l41l3qul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
