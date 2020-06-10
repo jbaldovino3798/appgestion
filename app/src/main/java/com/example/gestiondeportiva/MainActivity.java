@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-                    startActivity(new Intent(MainActivity.this, DeportistasActivity.class));
+                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
                     finish();
                 }else{
                     Toast.makeText(MainActivity.this, "No se pudo iniciar sesion, compruebe los datos.", Toast.LENGTH_SHORT).show();

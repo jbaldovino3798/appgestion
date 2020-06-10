@@ -56,4 +56,6 @@
     <string name="agregar_torneo">Agregar Torneo</string>
     <string name="agregar_horario">Agregar Horario</string>
     <string name="agregar_actividad">Agregar Actividad</string>
+    <string name="nick">Usuario</string>
+    <string name="nickname">jbaldovino3</string>
 </resources>

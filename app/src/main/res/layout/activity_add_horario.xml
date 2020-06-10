@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtHora" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edtFecha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -110,7 +110,7 @@
         android:text="@string/descripcion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edtFecha" />
 
     <EditText
         android:id="@+id/edtDescripcion"
