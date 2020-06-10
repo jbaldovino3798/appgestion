@@ -11,7 +11,7 @@
     <string name="name">Name</string>
     <string name="dd_mm_yyyy">DD/MM/YYYY</string>
     <string name="_00_00_am_pm">00:00 AM/PM</string>
-    <string name="direccion">Carrera 18 # 55 - 80</string>
+    <string name="direccion">Carrera 18 # 55 80</string>
     <string name="codigo">Codigo</string>
     <string name="usuario">jbaldovino3</string>
     <string name="telefono">Telefono</string>
@@ -52,4 +52,8 @@
     <string name="title_activity_actividades">ActividadesActivity</string>
     <string name="formato_fecha">DD/MM/YYYY</string>
     <string name="fecha">Fecha</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="agregar_torneo">Agregar Torneo</string>
+    <string name="agregar_horario">Agregar Horario</string>
+    <string name="agregar_actividad">Agregar Actividad</string>
 </resources>
