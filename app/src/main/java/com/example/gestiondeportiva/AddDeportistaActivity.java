@@ -27,14 +27,14 @@ public class AddDeportistaActivity extends AppCompatActivity {
     private EditText edtDireccion;
     private EditText edtContraseña;
     private EditText edtTelefono;
-    private Button btnAgregar;
-    private int codigo;
+    private Button btnAgregarDeportista;
+    private String codigo;
     private String nombres;
     private String usuario;
     private String apellidos;
     private String direccion;
     private String contraseña;
-    private int telefono;
+    private String telefono;
     DatabaseReference firebaseReference;
     //FirebaseAuth auth;
 
@@ -45,26 +45,27 @@ public class AddDeportistaActivity extends AppCompatActivity {
 
         //auth = FirebaseAuth.getInstance();
         firebaseReference = FirebaseDatabase.getInstance().getReference();
-        edtCodigo = findViewById(R.id.edtCodigo);
-        edtUsuario = findViewById(R.id.edtNick);
-        edtNombres = findViewById(R.id.edtNombres);
-        edtApellidos = findViewById(R.id.edtApellido);
-        edtDireccion = findViewById(R.id.edtDireccion);
-        edtContraseña = findViewById(R.id.edtPassword);
-        edtTelefono = findViewById(R.id.edtTelefono);
-        btnAgregar = findViewById(R.id.btnAgregar);
+        edtCodigo = findViewById(R.id.edtCodigoDeportista);
+        edtUsuario = findViewById(R.id.edtNickDeportista);
+        edtNombres = findViewById(R.id.edtNombresDeportista);
+        edtApellidos = findViewById(R.id.edtApellidoDeportista);
+        edtDireccion = findViewById(R.id.edtDireccionDeportista);
+        edtContraseña = findViewById(R.id.edtPasswordDeportista);
+        edtTelefono = findViewById(R.id.edtTelefonoDeportista);
+        btnAgregarDeportista = findViewById(R.id.btnAgregarDeportista);
 
-        btnAgregar.setOnClickListener(new View.OnClickListener() {
+        btnAgregarDeportista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                codigo = Integer.parseInt(edtCodigo.getText().toString());
+                codigo = edtCodigo.getText().toString();
                 usuario = edtUsuario.getText().toString();
                 nombres = edtNombres.getText().toString();
                 apellidos = edtApellidos.getText().toString();
                 direccion = edtDireccion.getText().toString();
-                telefono = Integer.parseInt(edtTelefono.getText().toString());
+                telefono = edtTelefono.getText().toString();
                 contraseña = edtContraseña.getText().toString();
-                if(contraseña.length()>=6){
+                if(contraseña.length()>=6 && !codigo.isEmpty() && !usuario.isEmpty() && !nombres.isEmpty() && !apellidos.isEmpty()
+                && !direccion.isEmpty() && !telefono.isEmpty()){
                     registrarDeportista(codigo, usuario, nombres, apellidos, direccion, telefono, contraseña);
                     //auth.createUserWithEmailAndPassword(usuario+"@unisimon.edu.co",contraseña);
                 }else{
@@ -74,7 +75,7 @@ public class AddDeportistaActivity extends AppCompatActivity {
         });
     }
 
-    private void registrarDeportista(int codigo, String usuario, String nombres, String apellidos, String direccion, int telefono, String contraseña) {
+    private void registrarDeportista(String codigo, String usuario, String nombres, String apellidos, String direccion, String telefono, String contraseña) {
         Map<String, Object> datosDeportista = new HashMap<>();
         datosDeportista.put("codigo", codigo);
         datosDeportista.put("usuario", usuario);
@@ -84,6 +85,7 @@ public class AddDeportistaActivity extends AppCompatActivity {
         datosDeportista.put("telefono", telefono);
         datosDeportista.put("contraseña", contraseña);
         firebaseReference.child("Deportista").push().setValue(datosDeportista);
+        Toast.makeText(AddDeportistaActivity.this, "Deportista Añadido", Toast.LENGTH_SHORT).show();
     }
 
 

@@ -20,7 +20,7 @@ public class AddHorarioActivity extends AppCompatActivity {
     private EditText edtHora;
     private EditText edtFecha;
     private EditText edtDescripcion;
-    private Button btnAgregar;
+    private Button btnAgregarHorario;
     private String hora;
     private String fecha;
     private String descripcion;
@@ -35,9 +35,9 @@ public class AddHorarioActivity extends AppCompatActivity {
         edtHora = findViewById(R.id.edtHora);
         edtFecha = findViewById(R.id.edtFecha);
         edtDescripcion = findViewById(R.id.edtDescripcion);
-        btnAgregar = findViewById(R.id.btnAgregar);
+        btnAgregarHorario = findViewById(R.id.btnAgregarHorario);
 
-        btnAgregar.setOnClickListener(new View.OnClickListener() {
+        btnAgregarHorario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 hora = edtHora.getText().toString();
@@ -58,5 +58,6 @@ public class AddHorarioActivity extends AppCompatActivity {
         datosHorario.put("fecha", fecha);
         datosHorario.put("descripcion", descripcion);
         firebaseReference.child("Horario").push().setValue(datosHorario);
+        Toast.makeText(AddHorarioActivity.this, "Horario añadido", Toast.LENGTH_SHORT).show();
     }
 }

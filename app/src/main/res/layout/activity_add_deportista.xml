@@ -20,10 +20,27 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/txtCodigo"
+                android:id="@+id/txtTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:textAlignment="center"
+                android:text="@string/agregar_deportista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/txtCodigoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/codigo"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
@@ -31,7 +48,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtCodigo"
+                android:id="@+id/edtCodigoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -45,18 +62,7 @@
                 android:layout_marginRight="32dp"/>
 
             <TextView
-                android:id="@+id/txtNombres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/nombres"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"/>
-
-            <TextView
-                android:id="@+id/txtNick"
+                android:id="@+id/txtNickDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -67,7 +73,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtNick"
+                android:id="@+id/edtNickDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -81,8 +87,19 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginRight="32dp"/>
 
+            <TextView
+                android:id="@+id/txtNombresDeportista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/nombres" />
+
             <EditText
-                android:id="@+id/edtNombres"
+                android:id="@+id/edtNombresDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -97,7 +114,7 @@
                 android:layout_marginRight="32dp"/>
 
             <TextView
-                android:id="@+id/txtApellido"
+                android:id="@+id/txtApellidoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -108,7 +125,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtApellido"
+                android:id="@+id/edtApellidoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -123,7 +140,7 @@
                 android:layout_marginRight="32dp"/>
 
             <TextView
-                android:id="@+id/txtDireccion"
+                android:id="@+id/txtDireccionDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -134,7 +151,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtDireccion"
+                android:id="@+id/edtDireccionDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -148,7 +165,7 @@
                 android:layout_marginRight="32dp"/>
 
             <TextView
-                android:id="@+id/txtPassword"
+                android:id="@+id/txtPasswordDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -159,7 +176,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtPassword"
+                android:id="@+id/edtPasswordDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -173,7 +190,7 @@
                 android:layout_marginRight="32dp"/>
 
             <TextView
-                android:id="@+id/txtTelefono"
+                android:id="@+id/txtTelefonoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -184,7 +201,7 @@
                 android:layout_marginRight="32dp"/>
 
             <EditText
-                android:id="@+id/edtTelefono"
+                android:id="@+id/edtTelefonoDeportista"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -198,7 +215,7 @@
                 android:layout_marginRight="32dp"/>
 
             <Button
-                android:id="@+id/btnAdd"
+                android:id="@+id/btnAgregarDeportista"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_marginStart="32dp"

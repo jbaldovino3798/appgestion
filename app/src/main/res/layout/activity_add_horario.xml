@@ -84,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edtHora" />
 
     <Button
-        android:id="@+id/btnAgregar"
+        android:id="@+id/btnAgregarHorario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -124,7 +124,7 @@
         android:hint="@string/descripcion"
         android:ems="10"
         android:gravity="start|top"
-        android:inputType="textMultiLine"
+        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
