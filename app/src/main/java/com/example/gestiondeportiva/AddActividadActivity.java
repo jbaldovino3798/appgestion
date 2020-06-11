@@ -28,7 +28,7 @@ public class AddActividadActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_horario);
+        setContentView(R.layout.activity_add_actividad);
 
         firebaseReference = FirebaseDatabase.getInstance().getReference();
         edtHoraActividad = findViewById(R.id.edtHoraActividad);
