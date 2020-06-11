@@ -18,7 +18,7 @@ public class HorarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horario);
 
-        FloatingActionButton fab = findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fabhorario);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
