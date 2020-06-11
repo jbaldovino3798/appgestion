@@ -1,6 +1,5 @@
 package com.example.gestiondeportiva;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -37,14 +36,14 @@ public class AddDeportistaActivity extends AppCompatActivity {
     private String contraseña;
     private int telefono;
     DatabaseReference firebaseReference;
-    FirebaseAuth auth;
+    //FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_deportista);
 
-        auth = FirebaseAuth.getInstance();
+        //auth = FirebaseAuth.getInstance();
         firebaseReference = FirebaseDatabase.getInstance().getReference();
         edtCodigo = findViewById(R.id.edtCodigo);
         edtUsuario = findViewById(R.id.edtNick);
@@ -66,12 +65,8 @@ public class AddDeportistaActivity extends AppCompatActivity {
                 telefono = Integer.parseInt(edtTelefono.getText().toString());
                 contraseña = edtContraseña.getText().toString();
                 if(contraseña.length()>=6){
-                    if(!usuario.isEmpty() && !nombres.isEmpty() && !apellidos.isEmpty() && !direccion.isEmpty() ){
-                        registrarDeportista(codigo, usuario, nombres, apellidos, direccion, telefono);
-                        auth.createUserWithEmailAndPassword(usuario+"@unisimon.edu.co",contraseña);
-                    }else{
-                        Toast.makeText(AddDeportistaActivity.this, "Debe completar los campos ", Toast.LENGTH_SHORT).show();
-                    }
+                    registrarDeportista(codigo, usuario, nombres, apellidos, direccion, telefono, contraseña);
+                    //auth.createUserWithEmailAndPassword(usuario+"@unisimon.edu.co",contraseña);
                 }else{
                     Toast.makeText(AddDeportistaActivity.this, "La contraseña debe contener minimo 6 caracteres", Toast.LENGTH_SHORT).show();
                 }
@@ -79,7 +74,7 @@ public class AddDeportistaActivity extends AppCompatActivity {
         });
     }
 
-    private void registrarDeportista(int codigo, String usuario, String nombres, String apellidos, String direccion, int telefono) {
+    private void registrarDeportista(int codigo, String usuario, String nombres, String apellidos, String direccion, int telefono, String contraseña) {
         Map<String, Object> datosDeportista = new HashMap<>();
         datosDeportista.put("codigo", codigo);
         datosDeportista.put("usuario", usuario);
@@ -87,6 +82,7 @@ public class AddDeportistaActivity extends AppCompatActivity {
         datosDeportista.put("apellidos", apellidos);
         datosDeportista.put("direccion", direccion);
         datosDeportista.put("telefono", telefono);
+        datosDeportista.put("contraseña", contraseña);
         firebaseReference.child("Deportista").push().setValue(datosDeportista);
     }
 

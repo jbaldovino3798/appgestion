@@ -18,8 +18,8 @@ public class TorneosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_torneos);
 
-        FloatingActionButton fab = findViewById(R.id.fabtorneos);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fabtorneo = findViewById(R.id.fabtorneos);
+        fabtorneo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TorneosActivity.this, AddTorneoActivity.class);

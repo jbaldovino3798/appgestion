@@ -16,8 +16,8 @@ public class DeportistasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_deportistas);
 
-        FloatingActionButton fab = findViewById(R.id.fabdeportistas);
-        fab.setOnClickListener(new View.OnClickListener() {
+        FloatingActionButton fabdeportista = findViewById(R.id.fabdeportistas);
+        fabdeportista.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(DeportistasActivity.this, AddDeportistaActivity.class);
